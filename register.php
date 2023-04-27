@@ -10,11 +10,12 @@ try{
     $registerCar = "INSERT INTO parking Value('$plate','$floor','$slot');";
     $result = $conn->query($registerCar);
     $conn->close();
+    // echo "alert('Register Successfully!')";
 
-    echo "alert('Register Successfully!')";
     header("Location: ./register.html");
 }catch(Exception $e) {
-    echo "alert('Register Failed!')";
+    
+    // echo "alert('Register Failed!')";
     header("Location: ./register.html");
 }
 ?>
