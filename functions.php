@@ -54,7 +54,7 @@ function search($plate, $conn)
         $stmt = $mysqli->prepare("SELECT  `plate` ,`floor`, `slot`,TIMESTAMPDIFF(MINUTE, start_date, NOW()) as timediff FROM parking WHERE plate = ?;");
         $stmt->bind_param(
             "s",
-            $plate,
+            $plate
         );
         $stmt->execute();
         $result = $stmt->get_result();
