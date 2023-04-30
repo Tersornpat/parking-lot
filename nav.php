@@ -20,7 +20,7 @@
                     echo '<li class="nav-item"><a class="nav-link" href="search.php">Search</a></li>';
                 }
 
-                session_start();
+                // session_start();
                 ?>
 
 
