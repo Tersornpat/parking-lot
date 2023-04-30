@@ -1,0 +1,87 @@
+mysqli_sql_exception: Table 'parking_lot.parking_lot' doesn't exist in C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php:8
+Stack trace:
+#0 C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php(8): mysqli->prepare('SELECT `floor`,...')
+#1 C:\Users\prosf\Desktop\Project\PHP\parking-lot\index.php(90): addPlate('1', 'aa', '\xE0\xB8\x81\xE0\xB8\x82 1234', Object(mysqli))
+#2 {main} | April 30, 2023, 10:02 am 
+
+mysqli_sql_exception: Table 'parking_lot.parking_lot' doesn't exist in C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php:9
+Stack trace:
+#0 C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php(9): mysqli->prepare('SELECT `floor`,...')
+#1 C:\Users\prosf\Desktop\Project\PHP\parking-lot\index.php(90): addPlate('1', 'aa', '\xE0\xB8\x81\xE0\xB8\x82 1234', Object(mysqli))
+#2 {main} | April 30, 2023, 10:03 am 
+
+mysqli_sql_exception: Commands out of sync; you can't run this command now in C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php:21
+Stack trace:
+#0 C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php(21): mysqli->prepare('SELECT `floor`,...')
+#1 C:\Users\prosf\Desktop\Project\PHP\parking-lot\index.php(90): addPlate('1', 'aa', '\xE0\xB8\x81\xE0\xB8\x82 1234', Object(mysqli))
+#2 {main} | April 30, 2023, 10:04 am 
+
+mysqli_sql_exception: Commands out of sync; you can't run this command now in C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php:21
+Stack trace:
+#0 C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php(21): mysqli->prepare('SELECT `floor`,...')
+#1 C:\Users\prosf\Desktop\Project\PHP\parking-lot\index.php(90): addPlate('1', 'aa', '\xE0\xB8\x81\xE0\xB8\x82 1234', Object(mysqli))
+#2 {main} | April 30, 2023, 10:04 am 
+
+mysqli_sql_exception: Commands out of sync; you can't run this command now in C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php:21
+Stack trace:
+#0 C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php(21): mysqli->prepare('SELECT `floor`,...')
+#1 C:\Users\prosf\Desktop\Project\PHP\parking-lot\index.php(90): addPlate('1', 'aa', '\xE0\xB8\x81\xE0\xB8\x82 1234', Object(mysqli))
+#2 {main} | April 30, 2023, 10:06 am 
+mysqli_sql_exception: Commands out of sync; you can't run this command now in C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php:21
+Stack trace:
+#0 C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php(21): mysqli->prepare('SELECT `floor`,...')
+#1 C:\Users\prosf\Desktop\Project\PHP\parking-lot\index.php(90): addPlate('1', 'aa', '\xE0\xB8\x81\xE0\xB8\x82 1234', Object(mysqli))
+#2 {main} | April 30, 2023, 10:08 am 
+mysqli_sql_exception: Commands out of sync; you can't run this command now in C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php:21
+Stack trace:
+#0 C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php(21): mysqli->prepare('SELECT `floor`,...')
+#1 C:\Users\prosf\Desktop\Project\PHP\parking-lot\index.php(90): addPlate('1', 'aa', '\xE0\xB8\x81\xE0\xB8\x82 1234', Object(mysqli))
+#2 {main} | April 30, 2023, 10:08 am 
+mysqli_sql_exception: Commands out of sync; you can't run this command now in C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php:30
+Stack trace:
+#0 C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php(30): mysqli->prepare('INSERT INTO par...')
+#1 C:\Users\prosf\Desktop\Project\PHP\parking-lot\index.php(90): addPlate('1', 'aa', '\xE0\xB8\x81\xE0\xB8\x82 1234', Object(mysqli))
+#2 {main} | April 30, 2023, 10:12 am 
+
+mysqli_sql_exception: Commands out of sync; you can't run this command now in C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php:31
+Stack trace:
+#0 C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php(31): mysqli->prepare('INSERT INTO par...')
+#1 C:\Users\prosf\Desktop\Project\PHP\parking-lot\index.php(90): addPlate('1', 'aa', '\xE0\xB8\x81\xE0\xB8\x82 1234', Object(mysqli))
+#2 {main} | April 30, 2023, 10:14 am 
+
+mysqli_sql_exception: Commands out of sync; you can't run this command now in C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php:33
+Stack trace:
+#0 C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php(33): mysqli->prepare('INSERT INTO par...')
+#1 C:\Users\prosf\Desktop\Project\PHP\parking-lot\index.php(90): addPlate('1', 'aa', '\xE0\xB8\x81\xE0\xB8\x82 1234', Object(mysqli))
+#2 {main} | April 30, 2023, 10:16 am 
+
+mysqli_sql_exception: Commands out of sync; you can't run this command now in C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php:35
+Stack trace:
+#0 C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php(35): mysqli->prepare('INSERT INTO par...')
+#1 C:\Users\prosf\Desktop\Project\PHP\parking-lot\index.php(90): addPlate('1', 'aa', '\xE0\xB8\x81\xE0\xB8\x82 1234', Object(mysqli))
+#2 {main} | April 30, 2023, 10:17 am 
+
+mysqli_sql_exception: Commands out of sync; you can't run this command now in C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php:35
+Stack trace:
+#0 C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php(35): mysqli->prepare('INSERT INTO par...')
+#1 C:\Users\prosf\Desktop\Project\PHP\parking-lot\index.php(90): addPlate('1', 'aa', '\xE0\xB8\x81\xE0\xB8\x82 1234', Object(mysqli))
+#2 {main} | April 30, 2023, 10:17 am 
+
+mysqli_sql_exception: Commands out of sync; you can't run this command now in C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php:35
+Stack trace:
+#0 C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php(35): mysqli->prepare('INSERT INTO par...')
+#1 C:\Users\prosf\Desktop\Project\PHP\parking-lot\index.php(90): addPlate('1', 'aa', '\xE0\xB8\x81\xE0\xB8\x82 1234', Object(mysqli))
+#2 {main} | April 30, 2023, 10:17 am 
+
+mysqli_sql_exception: Commands out of sync; you can't run this command now in C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php:35
+Stack trace:
+#0 C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php(35): mysqli->prepare('INSERT INTO par...')
+#1 C:\Users\prosf\Desktop\Project\PHP\parking-lot\index.php(90): addPlate('1', 'aa', '\xE0\xB8\x81\xE0\xB8\x82 1234', Object(mysqli))
+#2 {main} | April 30, 2023, 10:17 am 
+
+mysqli_sql_exception: Commands out of sync; you can't run this command now in C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php:35
+Stack trace:
+#0 C:\Users\prosf\Desktop\Project\PHP\parking-lot\functions.php(35): mysqli->prepare('INSERT INTO par...')
+#1 C:\Users\prosf\Desktop\Project\PHP\parking-lot\index.php(90): addPlate('1', 'aa', '\xE0\xB8\x81\xE0\xB8\x82 1234', Object(mysqli))
+#2 {main} | April 30, 2023, 10:17 am 
+
