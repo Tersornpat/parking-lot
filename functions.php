@@ -17,22 +17,16 @@ function addPlate($floor, $slot, $plate, $conn)
 
         $result = $stmt->get_result();
         $data = $result->fetch_assoc();
-        // print_r($floor . " " . $slot . " " . $plate);
-        // print_r($data);
-
         if ($data != NULL) {
             if (isset($data["plate"]) && $data["plate"] == $plate) {
-                return  "รถทะเบียน " . $plate . " จองอยู่แล้ว";
+                return  "<font color='red'>รถทะเบียน " . $plate . " จองอยู่แล้ว</font>";
             }
             if (isset($data["slot"]) or isset($data["floor"])) {
-                return "มีการจองชั้น " . $floor . " Slot " . $slot . " อยู่แล้ว ";
+                return "<font color='red'>มีการจองชั้น " . $floor . " Slot " . $slot . " อยู่แล้ว </font>";
             }
         }
     } catch (Exception $e) {
-        $error_date = date("F j, Y, g:i a");
-        $message = "{$e} | {$error_date} \r\n";
-        file_put_contents("db-log.txt", $message, FILE_APPEND);
-        return "ไม่สามารถเข้าถึง";
+        return "<font color='red'>ไม่สามารถเข้าถึง</font>";
     }
 
     try {
@@ -47,9 +41,6 @@ function addPlate($floor, $slot, $plate, $conn)
         $stmt->execute();
         return "เพิ่มทะเบียน " . $plate . " สำเร็จ";
     } catch (Exception $e) {
-        $error_date = date("F j, Y, g:i a");
-        $message = "{$e} | {$error_date} \r\n\n";
-        file_put_contents("db-log.txt", $message, FILE_APPEND);
         return "เพิ่มไม่ได้";
     }
 }
@@ -60,7 +51,7 @@ function search($plate, $conn)
     $plate = str_replace(" ","", $plate);
     $mysqli = $conn;
     try {
-        $stmt = $mysqli->prepare("SELECT * FROM parking WHERE plate = ?;");
+        $stmt = $mysqli->prepare("SELECT  `plate` ,`floor`, `slot`,TIMESTAMPDIFF(MINUTE, start_date, NOW()) as timediff FROM parking WHERE plate = ?;");
         $stmt->bind_param(
             "s",
             $plate,
@@ -75,8 +66,6 @@ function search($plate, $conn)
         }
 
     } catch (Exception $e) {
-        $error_date = date("F j, Y, g:i a");
-        $message = "{$e} | {$error_date} \r\n\r\n";
-        file_put_contents("db-log.txt", $message, FILE_APPEND);
+
     }
 }

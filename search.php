@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Services - Brand</title>
+    <title>Parking-Lot</title>
+
+    <link rel="icon" type="image/x-icon" href="./assets/img/vehicle.png">
 
     <?php
     require("head.php");
@@ -37,7 +39,7 @@
         <div class="container py-5">
             <div class="row mb-3">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <p class="fw-bold text-success mb-2" style="font-family: Kanit;">ค้นหารถ</p>
+                    <p class="fw-bold text-success mb-2" style="font-family: Kanit;font-size:30px;">ค้นหารถ</p>
                     <h2 class="fw-bold">Search Parking</h2>
                 </div>
             </div>
@@ -54,18 +56,40 @@
             if (isset($_POST["Search"])) {
                 $data = search($_POST["plate"], $conn);
                 if ($data != null) {
+                    $plate = $data["plate"];
                     $floor = $data["floor"];
                     $myslot = strtoupper($data["slot"]);
+                    $timediff = $data["timediff"];
 
             ?>
 
-                    <div class="row mb-3">
+                    <div class="row mb-1">
                         <div class="col-md-8 col-xl-6 text-center mx-auto">
-                            <p class="fw-bold text-success mb-2" style="font-family: Kanit;"> ชั้น <?php print($floor) ?></p>
-                            <h2 class="fw-bold" style="font-family: Kanit;">Plate: <?php print($data["plate"] . ", ชั้น: " . $floor . ", Slot: " . $myslot) ?></h2>
-                        </div>
+                            <p class="fw-bold text-success mb-2" style="font-family: Kanit;font-size:30px"> ชั้น <?php print($floor) ?></p>                        </div>
                     </div>
-                    <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
+                    <div class="row mb-3">
+                            <div class="col-md-8 col-xl-6 text-center mx-auto" style="font-family: Kanit;">
+                            <table class="normal" width="100%">
+                                <tr class="normal">
+                                    <td class="normal" style="font-family: Kanit;font-size:23px"  colspan ="2"><b>INFORMATION</td>
+                                </tr>
+                                <tr class="normal">
+                                    <td class="normal">Floor: <b><?php print($floor) ?></td>
+                                    <td class="normal">Time Elapsed: <b><?php print($timediff ."  นาที") ?> </td>
+                                </tr>
+                                <tr class="normal">
+                                    <td class="normal">License Plate:  <b><?php print(strtoupper($plate)) ?> </td>
+                                    <td class="normal">Park-Slot: <b><?php print($floor.$myslot) ?> </td>
+                                </tr>
+                                <tr class="normal">
+                                    <td class="normal">Your Location: <b><?php print("Floor 4") ?> </td>
+                                    <td class="normal">You must <b><?php print(($floor > 4 ? "go up to Floor ".$floor : ($floor ==  4 ? "go straight" : "go down to Floor ".$floor))) ?> </td>
+                                </tr>
+                            </table>
+                            </div>
+                        </div>
+                    <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px; height: 900px;overflow:auto;">
+                   
                         <table class="table">
                             <tbody>
                         <?php
@@ -73,21 +97,34 @@
                         for ($i = 0; $i < 5; $i++) {
                             echo '                        
                             <tr style="text-align: center;">
-                                <td scope="row" style="padding: 50px; font-size: 30px; ';
+                                <td scope="row" style="padding: 50px; font-size: 20px; ';
 
-                            if ($slot[$i][0] == $myslot) echo " background-color: #19A7CE; ";
-                            echo '">';
-                            echo $floor . $slot[$i][0];
+                            if ($slot[$i][0] == $myslot){ 
+                                echo " background-color: #FFA559; ";
+                                echo '">';
+                                echo "<b>HERE<br>".$floor . $slot[$i][0];
+                            }else{
+                                echo '">';
+                                echo $floor . $slot[$i][0];
+                            }
+                            
                             echo '</td>';
+                            
+                            
 
 
-                            echo '<td style="padding: 50px; font-size: 30px;';
-                            if ($slot[$i][1] == $myslot) echo " background-color: #19A7CE; ";
-                            echo '">';
-                            echo $floor . $slot[$i][1]
-                                . '</td>
-
-                        </tr>';
+                            echo '<td style="padding: 50px; font-size: 20px;';
+                            if ($slot[$i][1] == $myslot){ 
+                                echo " background-color: #FFA559; ";
+                                echo '">';
+                                echo "<b>HERE<br>".$floor . $slot[$i][1];
+                            }else{
+                                echo '">';
+                                echo $floor . $slot[$i][1];
+                            }
+                            
+                            echo '</td>';
+                            echo '</tr>'; 
                         }
                     }
                 }
@@ -99,15 +136,8 @@
     </section>
 
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
+
 
     <?php
     require("foot.php");

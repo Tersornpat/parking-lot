@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Brand</title>
+    <title>Parking-Lot</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/vehicle.png">
 
     <?php
     require("head.php");
@@ -22,7 +23,7 @@
     $page = 'index';
     require("nav.php");
 
-    if (isset($_POST["Booking"])) {
+    if (isset($_POST["Booking"]) && isset($_POST["floor"]) && isset($_POST["slot"]) && isset($_POST["plate"])) {
         $floor = $_POST["floor"];
         $slot = $_POST["slot"];
         $plate = $_POST["plate"];
@@ -44,7 +45,6 @@
                     <div>
                         <form class="p-3 p-xl-4" method="post" action="./index.php">
                             <div class="mb-3">
-                                <!-- <input class="form-control" type="text" id="name-1" name="name" placeholder="Name"> -->
                                 <select class="form-control" name="floor" id="name-1">
                                     <option value="" disabled selected>Select floor</option>
                                     <option value="1">Floor 1</option>
@@ -109,6 +109,11 @@
     <br>
     <br>
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
 
     <?php
     require("foot.php");
