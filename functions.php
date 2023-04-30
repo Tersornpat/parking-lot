@@ -3,6 +3,7 @@
 
 function addPlate($floor, $slot, $plate, $conn)
 {
+    $plate = str_replace(" ","", $plate);
     $mysqli = $conn;
     try {
         $stmt = $mysqli->prepare("SELECT `plate` ,`floor`, `slot` FROM parking WHERE (floor = ? AND slot = ?) OR (plate = ?)");
@@ -56,6 +57,7 @@ function addPlate($floor, $slot, $plate, $conn)
 
 function search($plate, $conn)
 {
+    $plate = str_replace(" ","", $plate);
     $mysqli = $conn;
     try {
         $stmt = $mysqli->prepare("SELECT * FROM parking WHERE plate = ?;");
@@ -76,6 +78,5 @@ function search($plate, $conn)
         $error_date = date("F j, Y, g:i a");
         $message = "{$e} | {$error_date} \r\n\r\n";
         file_put_contents("db-log.txt", $message, FILE_APPEND);
-        return "ไม่สามารถค้นหาได้";
     }
 }

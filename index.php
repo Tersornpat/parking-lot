@@ -26,7 +26,6 @@
         $floor = $_POST["floor"];
         $slot = $_POST["slot"];
         $plate = $_POST["plate"];
-        $plate = str_replace(" ","", $plate);
 
     }
 

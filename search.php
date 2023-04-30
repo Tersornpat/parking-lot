@@ -8,6 +8,8 @@
 
     <?php
     require("head.php");
+    require("functions.php");
+    include "./connectdb.php";
     ?>
 
 
@@ -21,9 +23,13 @@
     $page = 'Search';
     require("nav.php");
 
-    // if(isset()){
-
-    // }
+    $slot = array(
+        array("AA", "AB"),
+        array("BA", "BB"),
+        array("CA", "CB"),
+        array("DA", "DB"),
+        array("EA", "EB")
+    );
     ?>
 
 
@@ -39,35 +45,56 @@
                 <div class="row row-cols-5 mb-5 justify-content-center">
                     <input class="form-control" style="width: 300px; margin-right: 20px" type="text" id="name-1" name="plate" placeholder="<?php if (isset($_POST["plate"])) echo $_POST["plate"];
                                                                                                                                             else echo "License Plate"; ?>">
-                    <input class="btn btn-primary shadow" type="submit" value="Search">
+                    <input class="btn btn-primary shadow" type="submit" value="Search" name="Search">
                 </div>
             </form>
-            <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
-                <table class="table">
-                    <tbody>
-                        <tr>
-                            <td scope="row">1</td>
-                            <td>Mark</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">2</td>
-                            <td>Jacob</td>
-                        </tr>
-                        <tr>
-                            <td scope="row">3</td>
-                            <td>Larry</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <!-- <div class="col mb-5"><img class="rounded img-fluid shadow" src="assets/img/products/1.jpg"></div>
-                <div class="col d-md-flex align-items-md-end align-items-lg-center mb-5">
-                    <div>
-                        <h5 class="fw-bold">Lorem ipsum dolor sit&nbsp;</h5>
-                        <p class="text-muted mb-4">Erat netus est hendrerit, nullam et quis ad cras porttitor iaculis. Bibendum vulputate cras aenean.</p>
-                        <button class="btn btn-primary shadow" type="button">Learn more</button>
+
+            <?php
+
+            if (isset($_POST["Search"])) {
+                $data = search($_POST["plate"], $conn);
+                if ($data != null) {
+                    $floor = $data["floor"];
+                    $myslot = strtoupper($data["slot"]);
+
+            ?>
+
+                    <div class="row mb-3">
+                        <div class="col-md-8 col-xl-6 text-center mx-auto">
+                            <p class="fw-bold text-success mb-2" style="font-family: Kanit;"> ชั้น <?php print($floor) ?></p>
+                            <h2 class="fw-bold" style="font-family: Kanit;">Plate: <?php print($data["plate"] . ", ชั้น: " . $floor . ", Slot: " . $myslot) ?></h2>
+                        </div>
                     </div>
-                </div> -->
-            </div>
+                    <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
+                        <table class="table">
+                            <tbody>
+                        <?php
+
+                        for ($i = 0; $i < 5; $i++) {
+                            echo '                        
+                            <tr style="text-align: center;">
+                                <td scope="row" style="padding: 50px; font-size: 30px; ';
+
+                            if ($slot[$i][0] == $myslot) echo " background-color: #19A7CE; ";
+                            echo '">';
+                            echo $floor . $slot[$i][0];
+                            echo '</td>';
+
+
+                            echo '<td style="padding: 50px; font-size: 30px;';
+                            if ($slot[$i][1] == $myslot) echo " background-color: #19A7CE; ";
+                            echo '">';
+                            echo $floor . $slot[$i][1]
+                                . '</td>
+
+                        </tr>';
+                        }
+                    }
+                }
+                        ?>
+                            </tbody>
+                        </table>
+                    </div>'
         </div>
     </section>
 
