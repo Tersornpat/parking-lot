@@ -1,7 +1,7 @@
 <?php
-define('SERVER', 'localhost:3306');
-define('USERNAME', 'root');
-define('PASSWORD', '');
+define('SERVER', '104.248.150.246:3306');
+define('USERNAME', 'sornpat');
+define('PASSWORD', '1234');
 define('DATABASE', 'parking_lot');
 
 function connect()
