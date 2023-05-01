@@ -36,8 +36,8 @@
         <div class="container py-5">
             <div class="row mb-3">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <p class="fw-bold text-success mb-2" style="font-family: Kanit;">จองที่จอดรถ</p>
-                    <h2 class="fw-bold">Booking Car's Parking by Plate</h2>
+                    <p class="fw-bold text-success mb-2" style="font-family: Kanit;">จำที่จอดรถ</p>
+                    <h2 class="fw-bold">Register Car's Parking by Plate</h2>
                 </div>
             </div>
             <div class="row d-flex justify-content-center">
