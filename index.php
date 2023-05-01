@@ -73,7 +73,7 @@
                             </div>
                             <div class="mb-3"><input class="form-control" type="text" id="name-1" name="plate" placeholder="License Plate"></div>
                             <div>
-                                <input class="btn btn-primary shadow d-block w-100" type="submit" name="Booking" value="Booking">
+                                <input class="btn btn-primary shadow d-block w-100" type="submit" name="Booking" value="Register">
                             </div>
                         </form>
                     </div>

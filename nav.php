@@ -13,10 +13,10 @@
             <ul class="navbar-nav mx-auto">
                 <?php
                 if ($page == 'Search') {
-                    echo '<li class="nav-item"><a class="nav-link" href="index.php">Booking</a></li>';
+                    echo '<li class="nav-item"><a class="nav-link" href="index.php">Register</a></li>';
                     echo '<li class="nav-item"><a class="nav-link active" href="search.php">Search</a></li>';
                 } else if ($page == 'index') {
-                    echo '<li class="nav-item"><a class="nav-link active" href="index.php">Booking</a></li>';
+                    echo '<li class="nav-item"><a class="nav-link active" href="index.php">Register</a></li>';
                     echo '<li class="nav-item"><a class="nav-link" href="search.php">Search</a></li>';
                 }
 
@@ -24,7 +24,7 @@
                 ?>
 
 
-            </ul><a class="btn btn-primary shadow" role="button" href="index.php">Booking</a>
+            </ul><a class="btn btn-primary shadow" role="button" href="index.php">Register Car</a>
         </div>
     </div>
 </nav>
