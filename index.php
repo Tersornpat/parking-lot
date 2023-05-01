@@ -101,7 +101,12 @@
 
     ?>
 
-    <div class="footer">
+    <div style="
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+    ">
         <?php
             require("foot.php");
         ?>
