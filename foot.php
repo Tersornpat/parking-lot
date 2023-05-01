@@ -1,4 +1,4 @@
-<footer class="bg-primary-gradient">
+<footer class="bg-primary-gradient" style=" left: 0;bottom: 0;">
     <div class="container py-4 py-lg-5">
         <div class="row justify-content-center">
         </div>

@@ -16,6 +16,13 @@ body {
     width: 50%;
 }
 
+.footter{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
 table,
 th,
 td {

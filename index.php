@@ -32,7 +32,7 @@
 
     ?>
 
-    <section class="py-2">
+    <section class="py-2" style="height:100%">
         <div class="container py-5">
             <div class="row mb-3">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
@@ -82,8 +82,6 @@
         </div>
     </section>
 
-    <br>
-
     <?php
 
     if (isset($_POST["Booking"]) && $message = addPlate($floor, $slot, $plate, $conn)) {
@@ -102,22 +100,15 @@
     }
 
     ?>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    
 
-    <?php
-    require("foot.php");
-    ?>
+    <div style="position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;">
+        <?php
+            require("foot.php");
+        ?>
+    </div>
 
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bold-and-bright.js"></script>
