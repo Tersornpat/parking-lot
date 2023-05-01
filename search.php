@@ -135,10 +135,7 @@
         </div>
     </section>
 
-    <div style="position: fixed;
-                left: 0;
-                bottom: 0;
-                width: 100%;">
+    <div class="footer">
         <?php
             require("foot.php");
         ?>
